@@ -58,5 +58,5 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(move_thumbnail_opt_to_filer, move_thumbnail_opt_to_cms),
+#        migrations.RunPython(move_thumbnail_opt_to_filer, move_thumbnail_opt_to_cms),
     ]
