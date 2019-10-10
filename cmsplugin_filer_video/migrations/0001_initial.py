@@ -35,7 +35,7 @@ class Migration(migrations.Migration):
                 ('buttonovercolor', models.CharField(default=settings.VIDEO_BUTTON_OVER_COLOR, max_length=6, verbose_name='button over color', help_text='Hexadecimal, eg ff00cc')),
                 ('buttonhighlightcolor', models.CharField(default=settings.VIDEO_BUTTON_HIGHLIGHT_COLOR, max_length=6, verbose_name='button highlight color', help_text='Hexadecimal, eg ff00cc')),
                 ('image', filer.fields.image.FilerImageField(null=True, to='filer.Image', help_text='preview image file', related_name='filer_video_image', blank=True, verbose_name='image')),
-                ('movie', filer.fields.file.FilerFileField(null=True, to='filer.File', help_text='use .flv file or h264 encoded video file', blank=True, verbose_name='movie file')),
+                ('movie', filer.fields.file.FilerFileField(null=True, to='filer.File', help_text='use .flv file or h264 encoded video file', blank=True, verbose_name='movie file', on_delete=models.CASCADE)),
             ],
             options={
                 'abstract': False,
