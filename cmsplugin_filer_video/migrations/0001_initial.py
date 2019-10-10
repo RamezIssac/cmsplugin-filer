@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='FilerVideo',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
+                ('cmsplugin_ptr', models.OneToOneField(on_delete=models.CASCADE,parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
                 ('movie_url', models.CharField(help_text='vimeo or youtube video url. Example: http://www.youtube.com/watch?v=YFa59lK-kpo', max_length=255, null=True, verbose_name='movie url', blank=True)),
                 ('width', models.PositiveSmallIntegerField(verbose_name='width', default=settings.VIDEO_WIDTH)),
                 ('height', models.PositiveSmallIntegerField(verbose_name='height', default=settings.VIDEO_HEIGHT)),
