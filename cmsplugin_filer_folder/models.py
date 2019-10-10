@@ -26,7 +26,7 @@ class FilerFolder(CMSPlugin):
     cmsplugin_ptr = models.OneToOneField(
         to=CMSPlugin,
         related_name='%(app_label)s_%(class)s',
-        parent_link=True,
+        parent_link=True, on_delete=models.CASCADE
     )
 
     objects = FilerPluginManager(select_related=('folder',))

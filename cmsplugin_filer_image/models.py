@@ -79,7 +79,7 @@ class FilerImage(CMSPlugin):
     cmsplugin_ptr = models.OneToOneField(
         to=CMSPlugin,
         related_name='%(app_label)s_%(class)s',
-        parent_link=True,
+        parent_link=True, on_delete=models.CASCADE
     )
 
     # we only add the image to select_related. page_link and file_link are FKs
